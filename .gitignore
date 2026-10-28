@@ -218,3 +218,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project secrets and local tooling
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
