@@ -27,17 +27,7 @@ and Recall@3 is `1.0`.
 - Iterables, including generators, are supported. At most K retrieved IDs are
   consumed; an empty relevant set does not consume retrievals.
 
-### Why it matters and trade-offs
+### Limitations
 
-Low recall can identify missing context before evaluating an LLM's generated
-answer. High recall alone does not measure result ordering, irrelevant context,
-answer correctness or latency. Future precision and reciprocal rank metrics will
-complement it.
-
-The implementation uses sets for membership and deduplication. For R relevance
-judgments and T = min(K, number of retrieved results), expected time and auxiliary
-space are O(R + T), assuming constant-time hashing. It does not call a model,
-vector database or network service.
-
-Run `python -m pytest tests/test_recall_at_k.py` after installing the development
-dependencies from the repository root.
+Recall@K does not measure result ordering or irrelevant results, so it should be
+paired with precision and rank-based metrics.
