@@ -38,13 +38,13 @@ score = recall_at_k(
 print(score)  # 0.5
 ```
 
-See the [evaluation notes](ai_engineering/evaluations/README.md) for the metric definition and edge cases, and the [retrieval notes](ai_engineering/retrieval/README.md) for the `POST /retrieve` policy and API contract. CI runs tests on Python 3.10, 3.12 and 3.14, plus Ruff lint and format checks.
+See the [evaluation notes](ai_engineering/evaluations/README.md) for the metric definition and edge cases, and the [retrieval notes](ai_engineering/retrieval/README.md) for the `POST /retrieve` policy and API contract. Revision questions are in [interview_questions.md](interview_questions.md). CI runs tests on Python 3.10, 3.12 and 3.14, plus Ruff lint and format checks.
 
 ## Roadmap
 
 - [x] `recall_at_k()`
 - [x] Policy-aware `POST /retrieve` API
-- [ ] `precision_at_k()`
+- [x] `precision_at_k()`
 - [ ] `reciprocal_rank_at_k()`
 - [ ] First LeetCode solution
 
