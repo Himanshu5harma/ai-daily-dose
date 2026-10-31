@@ -49,6 +49,7 @@ See the [evaluation notes](ai_engineering/evaluations/README.md) for the metric 
 - [x] `ndcg_at_k()`, batch `evaluate()` and significance tests
 - [x] Optional ranx backend, TREC file readers and an [evaluation example](examples/evaluate_at_scale.py)
 - [x] LeetCode 3970: [Shortest Path With At Most K Consecutive Identical Characters](leetcode/3970_shortest_path_with_at_most_k_consecutive_identical_characters.py)
+- [x] LeetCode 3665: [Twisted Mirror Path Count](leetcode/3665_twisted_mirror_path_count.py)
 
 ## License
 
