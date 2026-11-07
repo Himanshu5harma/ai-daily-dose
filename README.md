@@ -7,6 +7,7 @@ Daily practice: LeetCode problems and small, tested AI engineering building bloc
 | --- | --- |
 | `ai_engineering/evaluations/` | Retrieval metrics |
 | `ai_engineering/retrieval/` | Policy-aware retrieval API (FastAPI) |
+| `ai_engineering/support/` | Tenant-aware support assistant, bounded tools, and persistent chat |
 | `tests/` | Pytest tests |
 | `journal/` | Daily notes |
 
@@ -44,6 +45,7 @@ See the [evaluation notes](ai_engineering/evaluations/README.md) for the metric 
 
 - [x] `recall_at_k()`
 - [x] Policy-aware `POST /retrieve` API
+- [x] [Support assistant](ai_engineering/support/README.md) with tenant isolation, deadlines, tool authorization, and failure recovery
 - [x] `precision_at_k()`
 - [x] `reciprocal_rank_at_k()`
 - [x] `ndcg_at_k()`, batch `evaluate()` and significance tests

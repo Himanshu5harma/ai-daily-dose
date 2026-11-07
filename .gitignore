@@ -17,6 +17,7 @@ dist/
 *.pem
 *.key
 credentials*.json
+support-demo.sqlite3*
 
 # Editors and OS
 .idea/

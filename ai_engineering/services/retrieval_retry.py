@@ -49,9 +49,7 @@ def retrieve_with_retry(
             result = retrieve(timeout_seconds=min(timeout_seconds, remaining))
         except Exception:
             if deadline - clock() <= 0:
-                raise RetrievalTimeoutError(
-                    "retrieval exceeded its total time budget"
-                ) from None
+                raise RetrievalTimeoutError("retrieval exceeded its total time budget") from None
             if retries >= max_retries:
                 raise
         else:

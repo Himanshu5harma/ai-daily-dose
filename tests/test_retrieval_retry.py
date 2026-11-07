@@ -49,14 +49,17 @@ def test_remaining_budget_caps_attempt_timeout():
             raise RuntimeError("temporary failure")
         return "ok"
 
-    assert retrieve_with_retry(
-        retrieve,
-        timeout_seconds=10,
-        total_timeout_seconds=3,
-        retry_delay_seconds=0.5,
-        clock=fake.clock,
-        sleep=fake.sleep,
-    ) == "ok"
+    assert (
+        retrieve_with_retry(
+            retrieve,
+            timeout_seconds=10,
+            total_timeout_seconds=3,
+            retry_delay_seconds=0.5,
+            clock=fake.clock,
+            sleep=fake.sleep,
+        )
+        == "ok"
+    )
     assert seen_timeouts == [3, 1.5]
     assert fake.sleeps == [0.5]
 
@@ -152,9 +155,7 @@ def test_retry_limit_preserves_original_failure_before_deadline():
         raise failure
 
     with pytest.raises(RuntimeError) as exc_info:
-        retrieve_with_retry(
-            retrieve, max_retries=1, clock=fake.clock, sleep=fake.sleep
-        )
+        retrieve_with_retry(retrieve, max_retries=1, clock=fake.clock, sleep=fake.sleep)
     assert exc_info.value is failure
     assert len(calls) == 2
     assert fake.sleeps == [0.1]
