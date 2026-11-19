@@ -25,4 +25,44 @@ def reciprocal_rank_fusion(
     Raises:
         ValueError: if ``k < 0`` or ``top_n`` is given and ``<= 0``.
     """
-    raise NotImplementedError
+
+    if k < 0:
+        raise ValueError("k must be >= 0")
+
+    if top_n is not None and top_n <= 0:
+        raise ValueError("top_n must be greater than 0")
+
+
+    scores: dict[Hashable, float] = {}
+    first_seen: dict[Hashable, int] = {}
+
+    # Tracks the order in which IDs are first seen across all rankings
+    order = 0
+
+    for ranking in rankings:
+
+        # Avoid counting duplicates in the same ranking
+        seen_in_ranking: set[Hashable] = set()
+
+        for rank, doc_id in enumerate(ranking, start=1):
+            if doc_id in seen_in_ranking:
+                continue  # Skip duplicates in the same ranking
+
+            seen_in_ranking.add(doc_id)
+
+            # Update score for this doc_id
+            scores[doc_id] = scores.get(doc_id, 0.0) + 1 / (k + rank)
+
+            # Record the first time we see this doc_id across all rankings
+            if doc_id not in first_seen:
+                first_seen[doc_id] = order
+                order += 1
+
+    # Sort by score descending, then by first seen order
+    result = sorted(scores.items(), key=lambda x: (-x[1], first_seen.get(x[0], float('inf'))))
+
+    # Truncate if top_n is specified
+    if top_n is not None:
+        result = result[:top_n]
+
+    return result
