@@ -26,3 +26,6 @@ support-demo.sqlite3*
 
 # rag_from_scratch embedding cache
 rag_from_scratch/.cache/
+
+# build_prod_rag sample documents (bring your own; not redistributed)
+build_prod_rag/docs/

@@ -48,9 +48,6 @@ def fixed_size_spans(text: str, size: int, overlap: int = 0) -> list[Span]:
         start += stride
 
     return windows
-      
-    
-    
 
 
 def section_spans(document: Document, max_chars: int) -> list[Span]:
@@ -74,4 +71,69 @@ def section_spans(document: Document, max_chars: int) -> list[Span]:
     Raises:
         ValueError: if ``max_chars <= 0``.
     """
-    raise NotImplementedError
+
+    if max_chars <= 0:
+        raise ValueError("max_chars must be greater than 0")
+
+    spans: list[Span] = []
+
+    for section in document.sections:
+        blocks = section.blocks
+
+        # A section containing only its heading has no body.
+        if len(blocks) <= 1:
+            continue
+
+        # Keep short sections together, including their heading.
+        if section.end - section.start <= max_chars:
+            spans.append((section.start, section.end))
+            continue
+
+        span_start = None
+        span_end = None
+
+        for unit in blocks:
+            unit_start = unit.start
+            unit_end = unit.end
+
+            # A unit longer than max_chars must be split independently.
+            if unit_end - unit_start > max_chars:
+                # Close any currently accumulated span.
+                if span_start is not None:
+                    spans.append((span_start, span_end))
+                    span_start = None
+                    span_end = None
+
+                # Split the oversized unit into document-relative spans.
+                spans.extend(
+                    (unit_start + start, unit_start + end)
+                    for start, end in fixed_size_spans(
+                        # fixed_size_spans operates on text, so use the
+                        # unit's length and shift offsets below.
+                        " " * (unit_end - unit_start),
+                        max_chars,
+                        0,
+                    )
+                )
+                continue
+
+            # Start a new span with this unit.
+            if span_start is None:
+                span_start = unit_start
+                span_end = unit_end
+                continue
+
+            # Greedily add the unit if it fits.
+            if unit_end - span_start <= max_chars:
+                span_end = unit_end
+            else:
+                # Close the previous span and start another.
+                spans.append((span_start, span_end))
+                span_start = unit_start
+                span_end = unit_end
+
+        # Flush the final accumulated span.
+        if span_start is not None:
+            spans.append((span_start, span_end))
+
+    return spans
