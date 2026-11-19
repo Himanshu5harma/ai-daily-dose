@@ -1,10 +1,11 @@
 [project]
 name = "build-prod-rag"
 version = "0.1.0"
-description = "Add your description here"
+description = "LangChain sandbox for building a production-style RAG pipeline."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "chromadb>=1.5.9",
     "langchain>=1.4.10",
     "langchain-anthropic>=1.7.10",
     "langchain-community>=0.4.2",

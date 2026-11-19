@@ -1,11 +1,12 @@
-import os 
+import os
 import tempfile
 from pathlib import Path
-from langchain_community.document_loaders import (TextLoader, PyPDFLoader)
 
 from dotenv import load_dotenv
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
 
 load_dotenv()
+
 
 def load_text_file():
     # Create a temporary text file for demonstration
@@ -27,6 +28,7 @@ def load_text_file():
 
     return documents
 
+
 def load_pdf_file(pdf_path: str):
     # Load the PDF file using PyPDFLoader
     loader = PyPDFLoader(pdf_path)
@@ -38,6 +40,7 @@ def load_pdf_file(pdf_path: str):
         print(f"Loaded document content: {doc.page_content}")
 
     return documents
+
 
 if __name__ == "__main__":
     # load_text_file()
