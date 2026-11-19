@@ -23,3 +23,6 @@ support-demo.sqlite3*
 .idea/
 .vscode/
 .DS_Store
+
+# rag_from_scratch embedding cache
+rag_from_scratch/.cache/
