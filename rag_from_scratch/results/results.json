@@ -1,0 +1,1413 @@
+{
+ "k": 5,
+ "rrf_k": 60,
+ "overlap": 0,
+ "version_filter": true,
+ "model": "nomic-ai/modernbert-embed-base",
+ "questions": {
+  "dev-001": {
+   "query": "How do I create a path from a file URI?",
+   "type": "conceptual"
+  },
+  "dev-002": {
+   "query": "Serialize a Python dictionary to a JSON string",
+   "type": "conceptual"
+  },
+  "dev-003": {
+   "query": "Convert a pathname wildcard pattern to a regular expression",
+   "type": "conceptual"
+  },
+  "dev-005": {
+   "query": "What tuple does Path.walk yield in Python 3.12, and what controls top-down versus bottom-up traversal?",
+   "type": "exact"
+  },
+  "dev-006": {
+   "query": "Which PurePath.relative_to option allows .. entries in Python 3.12?",
+   "type": "exact"
+  },
+  "dev-007": {
+   "query": "How can I reopen a named temporary file after closing it inside a with block and still get context-exit cleanup?",
+   "type": "conceptual"
+  },
+  "dev-008": {
+   "query": "Besides str, what input types and encodings does json.loads support in Python 3.13?",
+   "type": "exact"
+  },
+  "dev-009": {
+   "query": "What changed about positional count and flags arguments to re.sub in Python 3.13?",
+   "type": "exact"
+  },
+  "dev-010": {
+   "query": "Can datetime.fromisoformat use a separator other than T, and can it parse fractional hours?",
+   "type": "conceptual"
+  },
+  "dev-011": {
+   "query": "How can I catch argparse.ArgumentError for an invalid value instead of exiting in Python 3.13?",
+   "type": "exact"
+  },
+  "dev-012": {
+   "query": "How does argparse add_argument(deprecated=True) behave in Python 3.13?",
+   "type": "exact"
+  },
+  "dev-013": {
+   "query": "How do I make a recursive glob with ** descend into dot-directories in Python 3.12?",
+   "type": "conceptual"
+  },
+  "dev-014": {
+   "query": "Compare shutil.copyfile and shutil.copy2 in Python 3.12: which copies metadata as well as file contents?",
+   "type": "multi"
+  },
+  "dev-015": {
+   "query": "How do glob.glob and Path.glob differ for names beginning with a dot in Python 3.13?",
+   "type": "multi"
+  },
+  "dev-016": {
+   "query": "In Python 3.13, when should I use json.dump instead of json.dumps, and what does each output to?",
+   "type": "multi"
+  },
+  "dev-017": {
+   "query": "Compare default context-manager cleanup for NamedTemporaryFile and TemporaryDirectory in Python 3.13.",
+   "type": "multi"
+  },
+  "dev-018": {
+   "query": "Why can os.path.commonprefix produce an invalid path while commonpath returns a valid path in Python 3.12?",
+   "type": "multi"
+  },
+  "dev-019": {
+   "query": "Why can isfile() and islink() both be true for the same filesystem path?",
+   "type": "conceptual"
+  },
+  "dev-020": {
+   "query": "What arguments does the rmtree onexc callback receive in Python 3.12, and how is it different from onerror?",
+   "type": "conceptual"
+  },
+  "dev-021": {
+   "query": "Compare converting a path to a file URI in Python 3.12 with creating a Path from a file URI in Python 3.13. Which APIs are documented?",
+   "type": "multi"
+  },
+  "dev-022": {
+   "query": "Compare making a glob pattern literal in Python 3.12 with turning a glob pattern into a regular expression in Python 3.13.",
+   "type": "multi"
+  }
+ },
+ "stats": {
+  "fixed-500": {
+   "chunks": 1872,
+   "total_chars": 931267,
+   "median": 500,
+   "tiny": 2
+  },
+  "section-500": {
+   "chunks": 2541,
+   "total_chars": 926110,
+   "median": 405,
+   "tiny": 143
+  },
+  "fixed-2000": {
+   "chunks": 475,
+   "total_chars": 931267,
+   "median": 2000,
+   "tiny": 0
+  },
+  "section-2000": {
+   "chunks": 753,
+   "total_chars": 929342,
+   "median": 1370,
+   "tiny": 8
+  }
+ },
+ "results": {
+  "fixed-500": {
+   "dense": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 9
+    }
+   },
+   "bm25": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 7
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 0.5,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 10
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-021": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 9
+    }
+   },
+   "hybrid": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 0.5,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-017": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 10
+    }
+   }
+  },
+  "section-500": {
+   "dense": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 10
+    }
+   },
+   "bm25": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 14
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 10
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 7
+    },
+    "dev-017": {
+     "recall": 0.5,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-021": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.5,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    }
+   },
+   "hybrid": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-017": {
+     "recall": 0.5,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.5,
+     "rr": 0.25,
+     "first_rank": 4
+    }
+   }
+  },
+  "fixed-2000": {
+   "dense": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 11
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.0,
+     "rr": 0.0,
+     "first_rank": 7
+    }
+   },
+   "bm25": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-017": {
+     "recall": 0.5,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    }
+   },
+   "hybrid": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 0.25,
+     "first_rank": 4
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 0.5,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    }
+   }
+  },
+  "section-2000": {
+   "dense": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    }
+   },
+   "bm25": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    }
+   },
+   "hybrid": {
+    "dev-001": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-002": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-003": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-005": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-006": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-007": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-008": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-009": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-010": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-011": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-012": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-013": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-014": {
+     "recall": 1.0,
+     "rr": 0.3333333333333333,
+     "first_rank": 3
+    },
+    "dev-015": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-016": {
+     "recall": 1.0,
+     "rr": 0.5,
+     "first_rank": 2
+    },
+    "dev-017": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-018": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-019": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-020": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-021": {
+     "recall": 0.5,
+     "rr": 1.0,
+     "first_rank": 1
+    },
+    "dev-022": {
+     "recall": 1.0,
+     "rr": 1.0,
+     "first_rank": 1
+    }
+   }
+  }
+ }
+}

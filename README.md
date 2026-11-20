@@ -8,6 +8,10 @@ Daily practice: LeetCode problems and small, tested AI engineering building bloc
 | `ai_engineering/evaluations/` | Retrieval metrics |
 | `ai_engineering/retrieval/` | Policy-aware retrieval API (FastAPI) |
 | `ai_engineering/support/` | Tenant-aware support assistant, bounded tools, and persistent chat |
+| `rag_from_scratch/` | Chunking, dense, BM25 and hybrid retrieval exercise (in progress) |
+| `build_prod_rag/` | LangChain production RAG sandbox (in progress, separate uv package) |
+| `examples/` | Runnable examples |
+| `leetcode/` | Daily DSA practice |
 | `tests/` | Pytest tests |
 | `journal/` | Daily notes |
 
@@ -25,6 +29,10 @@ python -m ruff format --check .
 ```
 
 On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`.
+
+The RAG work needs extra dependencies. See the [rag_from_scratch notes](rag_from_scratch/README.md)
+(`pip install -e '.[dev,rag]'`) and the [build_prod_rag notes](build_prod_rag/README.md), which
+uses uv (`uv sync --package build-prod-rag`).
 
 ## Example
 
@@ -50,9 +58,8 @@ See the [evaluation notes](ai_engineering/evaluations/README.md) for the metric 
 - [x] `reciprocal_rank_at_k()`
 - [x] `ndcg_at_k()`, batch `evaluate()` and significance tests
 - [x] Optional ranx backend, TREC file readers and an [evaluation example](examples/evaluate_at_scale.py)
-- [x] LeetCode 3970: [Shortest Path With At Most K Consecutive Identical Characters](leetcode/3970_shortest_path_with_at_most_k_consecutive_identical_characters.py)
-- [x] LeetCode 3665: [Twisted Mirror Path Count](leetcode/3665_twisted_mirror_path_count.py)
-- [x] LeetCode 56: [Merge Intervals](leetcode/56_merge_intervals.py)
+- [ ] RAG from scratch: chunking, dense, BM25 and RRF hybrid retrieval, measured on DocLens dev questions
+- [ ] Production RAG with LangChain: loaders, vector store, generation
 
 ## License
 
